@@ -3,5 +3,9 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['airbnb-base', 'prettier']
+  extends: ['airbnb-base', 'prettier'],
+  rules: {
+    'linebreak-style': 0,
+    'no-param-reassign': [2, { props: false }],
+  },
 };
