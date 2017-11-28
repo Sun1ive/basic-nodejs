@@ -6,7 +6,7 @@ const omdb = require('../lib/omdb');
 
 function search(req, res) {
   const parsedUrl = url.parse(req.url, true);
-  const { title } = parsedUrl.query;
+  const { query: { title } } = parsedUrl;
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
