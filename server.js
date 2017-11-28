@@ -1,8 +1,11 @@
 const http = require('http');
 
+const valid = require('./public/routes/public');
+
 http
   .createServer((req, res) => {
     if (req.url.match(/\.(html|css|js|png|jpg)$/)) {
+      valid(req, res);
     } else if (req.url === '/') {
     } else if (req.url.startsWith('/search')) {
     } else {
